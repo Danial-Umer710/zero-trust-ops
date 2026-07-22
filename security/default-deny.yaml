@@ -4,6 +4,7 @@ metadata:
   name: default-deny-ingress
   namespace: default
 spec:
-  endpointSelector:
-    matchLabels: {}
-  ingress: []
+  endpointSelector: {}
+  enableDefaultDeny:
+    ingress: true
+    egress: false
