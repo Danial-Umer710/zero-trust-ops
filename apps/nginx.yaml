@@ -17,6 +17,18 @@ spec:
       - name: nginx
         image: nginx # (Keep whatever version string you currently have)
         resources:
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 2
+          periodSeconds: 5
           requests:
             cpu: "50m"
             memory: "64Mi"
