@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-custom-page
+data:
+  index.html: |
+    <html>
+      <body style="background-color: #1a1a1a; color: #00ff00; font-family: monospace; padding: 50px;">
+        <h1>Zero-Trust Infrastructure: Online</h1>
+        <p>Deployment and self-healing systems are fully operational.</p>
+      </body>
+    </html>
