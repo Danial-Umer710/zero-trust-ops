@@ -13,8 +13,13 @@ spec:
       labels:
         app: nginx
     spec:
-      containers:
+     containers:
       - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+        image: nginx # (Keep whatever version string you currently have)
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "64Mi"
+          limits:
+            cpu: "100m"
+            memory: "128Mi"
