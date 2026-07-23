@@ -13,10 +13,16 @@ spec:
       labels:
         app: nginx
     spec:
-     containers:
+      containers:
       - name: nginx
-        image: nginx # (Keep whatever version string you currently have)
+        image: nginx
         resources:
+          requests:
+            cpu: "50m"
+            memory: "64Mi"
+          limits:
+            cpu: "100m"
+            memory: "128Mi"
         livenessProbe:
           httpGet:
             path: /
@@ -29,9 +35,10 @@ spec:
             port: 80
           initialDelaySeconds: 2
           periodSeconds: 5
-          requests:
-            cpu: "50m"
-            memory: "64Mi"
-          limits:
-            cpu: "100m"
-            memory: "128Mi"
+        volumeMounts:
+        - name: html-volume
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: html-volume
+        configMap:
+          name: nginx-custom-page
