@@ -1,0 +1,30 @@
+{
+	"nodes":[
+		{"id":"61636419a73c83db","type":"group","x":-200,"y":-80,"width":400,"height":400,"label":"k3d-zero-trust"},
+		{"id":"2637bd2a5d7a4099","type":"file","file":"06 - Deployments and Services.md","x":880,"y":-150,"width":400,"height":400},
+		{"id":"1533f34a435147dd","type":"file","file":"14 - Total Disaster Recovery.md","x":1200,"y":328,"width":400,"height":400},
+		{"id":"0335c1b5908c72a0","type":"text","text":"Web Browser (localhost:8080)","x":-920,"y":50,"width":161,"height":87},
+		{"id":"54175c7204e49ce9","type":"text","text":"ArgoCD Server (Port 443)","x":-129,"y":80,"width":223,"height":53},
+		{"id":"50ae18a75e10ce4b","type":"text","text":"Linux Subsystem & Docker Engine","x":-620,"y":-30,"width":200,"height":50},
+		{"id":"cc3a0f6bb1a68a8b","type":"file","file":"01 - Environment Setup.md","x":-920,"y":-620,"width":400,"height":400},
+		{"id":"3eb3c5e396ebe10d","type":"file","file":"02 - Cluster Creation.md","x":-460,"y":-620,"width":400,"height":400},
+		{"id":"3bc54cc047a6001f","type":"file","file":"03 - Helm and Cilium.md","x":0,"y":-620,"width":400,"height":400},
+		{"id":"aeb30c3ce2d052d3","type":"file","file":"Screenshot 2026-07-23 152717.png","x":200,"y":406,"width":400,"height":195},
+		{"id":"87fab27186e2709c","type":"file","file":"07 - The Flat Network Vulnerability.md","x":-912,"y":328,"width":400,"height":400},
+		{"id":"7e51007e9add2ab9","type":"file","file":"08 - Zero-Trust Network Policies.md","x":-460,"y":328,"width":400,"height":400},
+		{"id":"fa9adb74cb035916","type":"text","text":"**GitHub Repository**","x":300,"y":-10,"width":200,"height":60},
+		{"id":"bda6c225cd9e4cae","type":"file","file":"04 - ArgoCD (GitOps).md","x":440,"y":-620,"width":400,"height":400},
+		{"id":"9608e98fd85d1e9b","type":"file","file":"05 - GitOps Pipeline.md","x":880,"y":-620,"width":400,"height":400},
+		{"id":"2f174f315318ee82","type":"file","file":"Screenshot 2026-07-23 152717.png","x":640,"y":406,"width":400,"height":195},
+		{"id":"09ba8b680b0c7972","type":"file","file":"09 - External Ingress Routing.md","x":-912,"y":780,"width":400,"height":400},
+		{"id":"67d44edd5c8efb89","type":"file","file":"10 - eBPF Observability with Hubble.md","x":-460,"y":780,"width":400,"height":400},
+		{"id":"0e3e3b2f5bd2d80f","type":"file","file":"11 - Compute Isolation.md","x":-17,"y":780,"width":400,"height":400},
+		{"id":"bc2b46fda8edd654","type":"file","file":"12 - Application Health Checks.md","x":440,"y":780,"width":400,"height":400},
+		{"id":"d145a5ce2033b130","type":"file","file":"13 - Auto-Scaling.md","x":880,"y":780,"width":400,"height":400},
+		{"id":"37a67e19c020c0f9","type":"file","file":"15 - Advanced Observability.md","x":1340,"y":780,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"72959f74a664fa59","fromNode":"54175c7204e49ce9","fromSide":"top","toNode":"fa9adb74cb035916","toSide":"left","label":"GitOps Pull Method"},
+		{"id":"2b73d941e0a591fa","fromNode":"0335c1b5908c72a0","fromSide":"right","toNode":"54175c7204e49ce9","toSide":"bottom","label":"kubectl port-forward (Tunnel)"}
+	]
+}
